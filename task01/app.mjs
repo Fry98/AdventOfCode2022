@@ -19,5 +19,6 @@ rl.on('line', (line) => {
 
 rl.on('close', () => {
   sums.sort((a, b) => b - a);
-  console.log(sums[0] + sums[1] + sums[2]);
+  console.log(sums[0]); // Part 1
+  console.log(sums[0] + sums[1] + sums[2]); // Part 2
 });
