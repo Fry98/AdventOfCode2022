@@ -1,11 +1,11 @@
 import fs from 'fs';
 
-const table = new Map();
 const data = fs.readFileSync('input.txt', 'utf8').split('\n').filter(x => x);
 let total = 0;
 
 // Part 1:
-/* for (const line of data) {
+/* const table = new Set();
+for (const line of data) {
   table.clear();
   const comp1 = line.substring(0, line.length / 2);
   const comp2 = line.substring(line.length / 2);
@@ -15,13 +15,14 @@ let total = 0;
 
   for (const ch of comp2) {
     if (table.has(ch)) {
-      addToTotal(ch);
+      total += getValue(ch);
       break;
     }
   }
 } */
 
 // Part 2:
+const table = new Map();
 for (let i = 0; i < data.length; i += 3) {
   table.clear();
   const line1 = data[i];
