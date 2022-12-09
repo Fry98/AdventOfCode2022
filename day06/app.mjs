@@ -1,20 +1,14 @@
 import fs from 'fs';
 
-// Part 1:
-/** const SET_SIZE = 4; */
-
-// Part 2:
-const SET_SIZE = 14;
-
 let data = fs.readFileSync('input.txt', 'utf8');
-let counter = 0;
+console.log('Part 1:', findSequence(data, 4));
+console.log('Part 2:', findSequence(data, 14));
 
-for (;; counter++) {
-  const set = new Set(data.substring(0, SET_SIZE).split(''));
-  if (set.size === SET_SIZE) {
-    console.log(counter + SET_SIZE);
-    break;
+function findSequence(data, length) {
+  let copy = data, counter = 0;
+  for (;; counter++) {
+    const set = new Set(copy.substring(0, length).split(''));
+    if (set.size === length) return counter + length;
+    copy = copy.substring(1);
   }
-
-  data = data.substring(1);
 }
