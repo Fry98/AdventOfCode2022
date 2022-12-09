@@ -1,7 +1,7 @@
 import fs from 'fs';
 
 const data = fs.readFileSync('input.txt', 'utf8').split('\n').filter(x => x);
-const root = { name: '/', children: {}, parent: null, size: 0 };
+const root = { children: {}, parent: null, size: 0 };
 let curr = null, idx = 0, total = 0;
 
 while (idx < data.length) {
@@ -64,7 +64,6 @@ function update_size(node) {
 function cd_child(arg) {
   if (!curr.children[arg]) {
     curr.children[arg] = {
-      name: arg,
       children: {},
       parent: curr,
       size: 0
