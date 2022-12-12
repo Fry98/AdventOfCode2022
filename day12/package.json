@@ -1,0 +1,18 @@
+{
+  "name": "day12",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "exec:one": "aoc-kit run -p 1 app.js",
+    "exec:two": "aoc-kit run -p 2 app.js",
+    "submit:one": "aoc-kit submit -p 1 app.js",
+    "submit:two": "aoc-kit submit -p 2 app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aoc-kit": "^1.0.4"
+  }
+}
