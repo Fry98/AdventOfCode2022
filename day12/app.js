@@ -1,11 +1,10 @@
 import { defineSolution } from 'aoc-kit';
 
-export default defineSolution((input, solve, config) => {
+export default defineSolution((input, solve, { isPart1 }) => {
   let start = null, end = null, min_path = Number.MAX_VALUE;
   const heightGrid = [...Array(input[0].length)].map(() => []);
   const bestPathGrid = [...Array(input[0].length)].map(() => []);
   const usedGrid = [...Array(input[0].length)].map(() => []);
-  const isPart1 = config.part === 1;
 
   for (let i = 0; i < input.length; i++) {
     for (let j = 0; j < input[0].length; j++) {

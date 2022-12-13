@@ -13,6 +13,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "aoc-kit": "^1.1.3"
+    "aoc-kit": "^1.1.5"
   }
 }

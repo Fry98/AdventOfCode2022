@@ -24,12 +24,12 @@ function compare(p1, p2) {
   }
 }
 
-export default defineSolution((input, solve, config) => {
+export default defineSolution((input, solve, { isPart1 }) => {
   const data = input.filter(x => x).map(x => ({ div: false, data: JSON.parse(x) }));
-  if (config.part > 1) data.push({ div: true, data: [[2]] }, { div: true, data: [[6]] });
+  if (!isPart1) data.push({ div: true, data: [[2]] }, { div: true, data: [[6]] });
   let res = 0;
 
-  if (config.part === 1) {
+  if (isPart1) {
     for (let i = 0; i < data.length; i += 2) {
       if (!compare(data[i].data, data[i + 1].data))
         res += Math.floor(i / 2) + 1;

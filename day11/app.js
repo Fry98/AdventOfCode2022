@@ -1,9 +1,8 @@
 import { defineSolution } from 'aoc-kit';
 
-export default defineSolution((input, solve, config) => {
+export default defineSolution((input, solve, { isPart1 }) => {
   const size = Math.ceil(input.length / 7);
   const monkeys = [...Array(size)].map(() => ({}));
-  const isPart1 = config.part === 1;
   let mod = 1;
 
   let i = 0, id = 0;
