@@ -56,4 +56,4 @@ export default defineSolution((input, solve, config) => {
       dfs(newX, newY, dist + 1);
     }
   }
-}, { lines: true, day: 12 });
+}, { mode: 'lines', day: 12 });

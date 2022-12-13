@@ -52,4 +52,4 @@ export default defineSolution((input, solve, config) => {
 
   const sorted = monkeys.map(x => x.inspects).sort((a, b) => b - a);
   solve(sorted[0] * sorted[1]);
-}, { lines: true, day: 11 });
+}, { mode: 'lines', day: 11 });
